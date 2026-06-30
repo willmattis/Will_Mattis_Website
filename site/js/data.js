@@ -32,9 +32,9 @@ window.PORTFOLIO = {
     // Leave the value as "" to hide it too.
     links: {
       email: "willmattis86@gmail.com",
-      linkedin: "",                                   // e.g. "https://www.linkedin.com/in/yourname"  ← add yours
-      github: "https://github.com/willmattis",        // from your resume
-      resume: ""                                      // ← drop a *clean* (no review comments) resume PDF in assets/files/ and point here
+      linkedin: "https://www.linkedin.com/in/william-mattis-2417ab1a2/",
+      github: "https://github.com/willmattis",
+      resume: "assets/files/William-Mattis-Resume.pdf"
     },
 
     // Skill chips shown in the About section.
@@ -341,43 +341,47 @@ window.PORTFOLIO = {
     /* ===================== X-INATOR (STARTUP) ============================== */
     {
       slug: "x-inator-antechamber",
-      title: "X-Inator — High-Pressure Antechamber",
-      subtitle: "3000+ psi chamber assembly for producing nanostructured battery materials",
+      title: "X-Inator — Glovebox Antechamber",
+      subtitle: "Inert-atmosphere airlock to handle lithium for coin-cell production",
       org: "X-Inator (Personal Start-Up)",
       group: "X-Inator",
       date: "2023–2025",
       status: "Startup",
-      tags: ["CAD", "Mechanical", "High-Pressure", "Battery Materials", "Startup"],
+      tags: ["CAD", "Mechanical", "Sealing", "Battery Materials", "Startup"],
       thumb: "assets/img/xinator-0.jpg",
       model: "assets/files/x-inator-antechamber.step",
       summary: "X-Inator is the battery-materials startup I co-founded to develop nanostructured " +
-        "electrode materials. This antechamber is part of a high-pressure chamber assembly — rated " +
-        "for 3000+ psi — used in the production process for that material.",
-      role: "As co-founder, I designed and manufactured this high-pressure chamber assembly, " +
-        "along with the rest of our production hardware (a glovebox humidity-control loop and " +
-        "anode prototype molds). I also helped raise over $50,000 in non-dilutive funding through " +
-        "the UC Venture Lab and other donors to build it.",
+        "electrode materials. This antechamber was designed to add a sealed airlock to an existing " +
+        "glovebox — letting us pass materials in and out without breaking the inert atmosphere we " +
+        "needed to keep lithium from reacting while building test coin cells.",
+      role: "As co-founder, I designed and built this antechamber — along with the rest of our " +
+        "production hardware, including a glovebox humidity-control loop, anode prototype molds, and " +
+        "a 3000+ psi chamber for material production. I also helped raise over $50,000 in " +
+        "non-dilutive funding through the UC Venture Lab and other donors.",
       highlights: [
         "Co-founded the startup and raised $50k+ in non-dilutive funding (UC Venture Lab + donors)",
-        "Designed and manufactured a high-pressure chamber rated for 3000+ psi",
-        "Built supporting production hardware: glovebox humidity-control loop and anode prototype molds",
-        "Produced lab-made coin-cell batteries and imaged the nanostructured material on an SEM"
+        "Designed a sealed antechamber to retrofit an inert-atmosphere airlock onto an existing glovebox",
+        "Achieved a reliable seal on the antechamber — the goal of keeping an inert environment intact",
+        "Built to enable lithium handling for lab-made coin-cell battery production"
       ],
       sections: [
         { heading: "Overview", body: "X-Inator was a personal start-up focused on producing " +
-          "nanostructured materials for battery electrodes. Bringing that material to life required " +
-          "custom production hardware — a controlled-atmosphere glovebox, prototype molds, and a " +
-          "high-pressure chamber — which I designed and built in-house." },
-        { heading: "The high-pressure chamber", body: "The antechamber shown here is part of a " +
-          "chamber assembly rated for over 3000 psi, used in the material-production process. It was " +
-          "designed for the pressures and sealing required to form the nanostructured material " +
-          "reliably and safely." }
+          "nanostructured materials for battery electrodes. Building and testing those materials as " +
+          "coin cells meant handling lithium, which reacts in open air — so it has to be worked in an " +
+          "inert atmosphere. This antechamber was designed to add a proper airlock to an existing " +
+          "glovebox so materials could be moved in and out without losing that inert environment." },
+        { heading: "Design & outcome", body: "I designed the antechamber to seal reliably, and it " +
+          "did — it held the airlock seal we needed. The limiting factor turned out to be the existing " +
+          "glovebox itself, which struggled to stay sealed; that ultimately led us to move to a new " +
+          "glovebox for storing our materials. The antechamber work proved out the sealing approach " +
+          "and clarified where the real leak path was." }
       ],
       specs: [
         { label: "Venture", value: "Co-founder, X-Inator" },
         { label: "Funding", value: "$50k+ (non-dilutive)" },
-        { label: "Pressure rating", value: "3000+ psi" },
-        { label: "Application", value: "Nanostructured battery materials" },
+        { label: "Function", value: "Glovebox airlock / antechamber" },
+        { label: "Atmosphere", value: "Inert (lithium handling)" },
+        { label: "Application", value: "Coin-cell battery production" },
         { label: "Tool", value: "SolidWorks / NX" }
       ],
       gallery: [
@@ -400,32 +404,38 @@ window.PORTFOLIO = {
     {
       slug: "dc-motor-assembly",
       title: "DC Motor Assembly",
-      subtitle: "Designed and modeled DC motor build",
-      org: "University of Cincinnati",
+      subtitle: "DC motor designed and modeled for Electromagnetics coursework",
+      org: "University of Cincinnati — Electromagnetics",
       group: "School Projects",
       date: "2026",
       status: "Built",
-      tags: ["CAD", "Electromechanical", "DC Motor"],
+      tags: ["CAD", "Electromagnetics", "DC Motor", "Electromechanical"],
       thumb: "assets/img/motor-1.jpg",
       model: "assets/files/dc-motor.step",
-      summary: "A DC motor assembly I designed and modeled in CAD for a University of Cincinnati " +
-        "engineering course, covering the full electromechanical layout from rotor and stator to " +
-        "housing. // EDIT: name the course (e.g. Mechatronics) and what the motor was built to do.",
-      role: "I designed and modeled the complete DC motor assembly in CAD. " +
-        "// EDIT: add any analysis, hand calcs, or hardware you built beyond the model.",
+      summary: "A DC motor I designed and modeled for my Electromagnetics course — a hands-on way " +
+        "to show the real-world application of the magnetic and electric field theory we covered in " +
+        "class, built up as a full electromechanical CAD assembly.",
+      role: "I designed and modeled the complete DC motor assembly in CAD, translating the " +
+        "course's field theory into a working electromechanical design — rotor, stator, and housing.",
       highlights: [
-        "Full 3D CAD assembly of a DC motor — rotor, stator, windings, and housing",
-        "// EDIT — add a specific result (e.g. target torque/speed, or what you validated)"
+        "Built for an Electromagnetics course to demonstrate magnetic and electric fields in practice",
+        "Full 3D CAD assembly of a DC motor — rotor, stator, and housing",
+        "Connects classroom field theory to a tangible, real-world device"
       ],
       sections: [
-        { heading: "Overview", body: "A coursework project at the University of Cincinnati to " +
-          "design and model a DC motor. // EDIT: describe the assignment, the class, and the goal." },
-        { heading: "Design", body: "I built the assembly in CAD, working through the motor's " +
-          "electromechanical layout. // EDIT: describe your design decisions and what you learned." }
+        { heading: "Overview", body: "This project was built for my Electromagnetics course at the " +
+          "University of Cincinnati. The goal was to show the real-world application of what we " +
+          "learned in class — how magnetic and electric fields combine to produce motion — by " +
+          "designing and modeling an actual DC motor rather than just working the math on paper." },
+        { heading: "Design", body: "I modeled the motor as a complete electromechanical assembly " +
+          "in CAD, working through how the field interactions between the rotor and stator drive the " +
+          "motor. It ties the course's electromagnetic theory directly to the geometry of a device " +
+          "that uses it." }
       ],
       specs: [
         { label: "Type", value: "DC motor assembly" },
-        { label: "Context", value: "UC coursework" },
+        { label: "Course", value: "Electromagnetics (UC)" },
+        { label: "Goal", value: "Apply magnetic & electric field theory" },
         { label: "Tool", value: "SolidWorks / NX" }
       ],
       gallery: [

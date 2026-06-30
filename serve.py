@@ -39,6 +39,7 @@ Handler.extensions_map.update({
 
 if __name__ == "__main__":
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
-    with socketserver.TCPServer(("", PORT), Handler) as httpd:
+    # Threading server so a large STEP download can't block other requests.
+    with http.server.ThreadingHTTPServer(("", PORT), Handler) as httpd:
         print("Portfolio preview running at http://localhost:%d  (Ctrl+C to stop)" % PORT)
         httpd.serve_forever()
