@@ -11,36 +11,39 @@ window.PORTFOLIO = {
   /* ----- Your info (shown in the hero, about, and footer) ----------------- */
   profile: {
     name: "Will Mattis",
-    role: "Electrical & Computer Engineer",
+    role: "Electrical Engineer",
     // One punchy line under your name on the homepage:
-    tagline: "Embedded systems & PCB design for high-voltage EV powertrains.",
+    tagline: "Electronics Team Lead designing the battery & high-voltage hardware for a 600V electric race car.",
     location: "Cincinnati, OH",
     email: "willmattis86@gmail.com",
 
     // A short paragraph for the About section. Edit freely.
-    about: "Electrical engineering student at the University of Cincinnati and a " +
-      "member of Bearcats Electric Racing, where I design and build the electronics " +
-      "behind a Formula-style electric race car. My work spans the full battery " +
-      "management system — from cell-level sensing boards to the high-voltage " +
-      "safety hardware and the master controller that ties it all together. I enjoy " +
-      "taking a system from schematic capture and PCB layout through bring-up, " +
-      "firmware, and on-car validation.",
+    about: "Electrical engineering student at the University of Cincinnati (B.S. May 2026) " +
+      "and Electronics Team Lead at Bearcats Electric Racing, where I lead the design of the " +
+      "electronics behind a Formula-style electric race car. My work spans the full battery " +
+      "management system for the 600V powertrain — from cell-level sensing boards to the " +
+      "high-voltage pre/discharge safety hardware and the master controller that ties it all " +
+      "together — plus the CAN-based data-acquisition and wireless telemetry the team uses to " +
+      "debug the car. Before this I co-founded X-Inator, a battery-materials startup that " +
+      "raised over $50k to develop nanostructured electrode materials. I like taking a system " +
+      "from schematic capture and simulation through PCB layout, bring-up, and on-car validation.",
 
     // Links shown as buttons. Delete a line to hide that button.
     // Leave the value as "" to hide it too.
     links: {
       email: "willmattis86@gmail.com",
-      linkedin: "",          // e.g. "https://www.linkedin.com/in/yourname"
-      github: "",            // e.g. "https://github.com/yourname"
-      resume: ""             // e.g. "assets/files/resume.pdf"
+      linkedin: "",                                   // e.g. "https://www.linkedin.com/in/yourname"  ← add yours
+      github: "https://github.com/willmattis",        // from your resume
+      resume: ""                                      // ← drop a *clean* (no review comments) resume PDF in assets/files/ and point here
     },
 
     // Skill chips shown in the About section.
     skills: [
       "Altium Designer", "Schematic Capture", "PCB Layout", "LTspice",
-      "Embedded C / C++", "Teensy / Arduino", "CAN Bus", "isoSPI",
-      "Battery Management (BMS)", "High-Voltage Safety", "Soldering & Rework",
-      "Hardware Bring-up", "Oscilloscope / DMM"
+      "MATLAB", "Embedded C / C++", "Python", "Teensy / Arduino / ESP32",
+      "CAN Bus", "isoSPI", "Battery Management (BMS)", "High-Voltage Safety",
+      "Data Acquisition", "SolidWorks / NX", "3D Printing",
+      "Soldering & Reflow", "Hardware Bring-up"
     ]
   },
 
@@ -52,7 +55,7 @@ window.PORTFOLIO = {
    * ----------------------------------------------------------------------- */
   groups: [
     { name: "Bearcats Electric Racing", blurb: "Battery-management and high-voltage electronics for a Formula-style electric race car." },
-    { name: "X-Inator",                 blurb: "My startup — hardware I'm designing and building from the ground up." },
+    { name: "X-Inator",                 blurb: "My battery-materials startup — co-founded and raised $50k+ to build hardware for producing nanostructured electrode materials." },
     { name: "School Projects",          blurb: "Coursework and academic engineering projects at the University of Cincinnati." }
   ],
 
@@ -91,9 +94,10 @@ window.PORTFOLIO = {
       summary: "Cell-monitoring board for the accumulator that measures every series " +
         "cell voltage and ten pack temperatures, reporting back to the master over an " +
         "isolated isoSPI daisy chain.",
-      role: "I worked on the schematic capture and PCB layout for this board, " +
-        "including the cell-tap filtering and the isoSPI communication front-end. " +
-        "// EDIT this line to describe exactly what you did.",
+      role: "As Electronics Team Lead, I spearheaded the schematic capture, simulation, " +
+        "and PCB layout of this board — including the cell-tap filtering and the isolated " +
+        "isoSPI communication front-end — as part of the battery-management system I lead " +
+        "development of for our 600V powertrain.",
       highlights: [
         "Built around the Analog Devices ADBMS6830 multicell battery-stack monitor",
         "Monitors 16 series cell voltages with per-cell passive balancing taps",
@@ -157,9 +161,10 @@ window.PORTFOLIO = {
       summary: "The brain of the BMS: a Teensy 4.1–based controller that gathers data " +
         "from the sense boards over isoSPI, measures pack current, and drives the car's " +
         "shutdown, charging, and cooling outputs while talking to the vehicle over CAN.",
-      role: "I worked on this master board — integrating the Teensy with the isoSPI " +
-        "front-end, CAN interface, and output drivers. " +
-        "// EDIT this line to describe exactly what you did.",
+      role: "As Electronics Team Lead, I drove the design of this master board — " +
+        "integrating the Teensy with the isoSPI front-end, CAN interface, and output " +
+        "drivers — and coordinated a team of seven students across the broader BMS, " +
+        "HV-monitoring, and data-acquisition effort it ties together.",
       highlights: [
         "Teensy 4.1 (DEV-16996) master microcontroller",
         "isoSPI front-end to communicate with the daisy-chained sense boards",
@@ -223,9 +228,10 @@ window.PORTFOLIO = {
       summary: "Safety-critical board that measures the high-voltage bus across an " +
         "isolation barrier, detects a completed precharge, and switches the Accumulator " +
         "Isolation Relays (AIRs) through opto-isolated MOSFET drivers.",
-      role: "I worked on the high-voltage measurement chain and the isolated relay-drive " +
-        "circuitry on this board. " +
-        "// EDIT this line to describe exactly what you did.",
+      role: "As Electronics Team Lead, I designed the high-voltage measurement chain, the " +
+        "pre/discharge circuit, and the isolated relay-drive circuitry on this board. I also " +
+        "calculated and simulated the thermal performance of the tractive-system pre/discharge " +
+        "circuit in MATLAB to size its components for the 600V powertrain.",
       highlights: [
         "High-voltage measurement via high-value precision resistor dividers",
         "LM211 comparators detect HV presence and precharge-complete",
@@ -291,9 +297,10 @@ window.PORTFOLIO = {
       model: "assets/files/can-hat.step",
       summary: "A 40-pin Raspberry Pi HAT that adds an isolated CAN interface, letting a " +
         "Pi log and interact with the car's CAN bus for data acquisition and debugging.",
-      role: "I worked on the schematic and layout of this CAN HAT, including the " +
-        "controller, transceiver, and Pi header integration. " +
-        "// EDIT this line to describe exactly what you did.",
+      role: "I designed the schematic and layout of this CAN HAT — controller, transceiver, " +
+        "and Pi-header integration — as part of the data-acquisition system I developed to " +
+        "read and write CAN messages for troubleshooting the powertrain (the same DAQ effort " +
+        "that also carries vehicle telemetry over sub-1GHz HaLow Wi-Fi).",
       highlights: [
         "Standard 40-pin Raspberry Pi GPIO HAT form factor",
         "MCP2515 SPI CAN controller with a 16 MHz crystal",
@@ -334,30 +341,44 @@ window.PORTFOLIO = {
     /* ===================== X-INATOR (STARTUP) ============================== */
     {
       slug: "x-inator-antechamber",
-      title: "X-Inator — Antechamber Assembly",
-      subtitle: "Mechanical assembly for my startup's hardware",
-      org: "X-Inator",
+      title: "X-Inator — High-Pressure Antechamber",
+      subtitle: "3000+ psi chamber assembly for producing nanostructured battery materials",
+      org: "X-Inator (Personal Start-Up)",
       group: "X-Inator",
-      date: "2026",
-      status: "Prototype",
-      tags: ["CAD", "Mechanical", "Startup", "Assembly"],
+      date: "2023–2025",
+      status: "Startup",
+      tags: ["CAD", "Mechanical", "High-Pressure", "Battery Materials", "Startup"],
       thumb: "assets/img/xinator-0.jpg",
       model: "assets/files/x-inator-antechamber.step",
-      summary: "An early hardware assembly for X-Inator, the startup I'm building. " +
-        "// EDIT this summary to describe what X-Inator is and what this assembly does.",
-      role: "I designed and built this assembly end to end. " +
-        "// EDIT this line to describe exactly what you did.",
+      summary: "X-Inator is the battery-materials startup I co-founded to develop nanostructured " +
+        "electrode materials. This antechamber is part of a high-pressure chamber assembly — rated " +
+        "for 3000+ psi — used in the production process for that material.",
+      role: "As co-founder, I designed and manufactured this high-pressure chamber assembly, " +
+        "along with the rest of our production hardware (a glovebox humidity-control loop and " +
+        "anode prototype molds). I also helped raise over $50,000 in non-dilutive funding through " +
+        "the UC Venture Lab and other donors to build it.",
       highlights: [
-        "// EDIT — add a headline achievement",
-        "// EDIT — add another"
+        "Co-founded the startup and raised $50k+ in non-dilutive funding (UC Venture Lab + donors)",
+        "Designed and manufactured a high-pressure chamber rated for 3000+ psi",
+        "Built supporting production hardware: glovebox humidity-control loop and anode prototype molds",
+        "Produced lab-made coin-cell batteries and imaged the nanostructured material on an SEM"
       ],
       sections: [
-        { heading: "Overview", body: "// EDIT — describe X-Inator and the goal of this build." },
-        { heading: "Design", body: "// EDIT — describe the mechanical design and decisions." }
+        { heading: "Overview", body: "X-Inator was a personal start-up focused on producing " +
+          "nanostructured materials for battery electrodes. Bringing that material to life required " +
+          "custom production hardware — a controlled-atmosphere glovebox, prototype molds, and a " +
+          "high-pressure chamber — which I designed and built in-house." },
+        { heading: "The high-pressure chamber", body: "The antechamber shown here is part of a " +
+          "chamber assembly rated for over 3000 psi, used in the material-production process. It was " +
+          "designed for the pressures and sealing required to form the nanostructured material " +
+          "reliably and safely." }
       ],
       specs: [
-        { label: "Type", value: "Mechanical assembly" },
-        { label: "Tool", value: "// EDIT — e.g. SolidWorks / Fusion 360" }
+        { label: "Venture", value: "Co-founder, X-Inator" },
+        { label: "Funding", value: "$50k+ (non-dilutive)" },
+        { label: "Pressure rating", value: "3000+ psi" },
+        { label: "Application", value: "Nanostructured battery materials" },
+        { label: "Tool", value: "SolidWorks / NX" }
       ],
       gallery: [
         { src: "assets/img/xinator-0.jpg", caption: "// EDIT caption" },
@@ -387,20 +408,25 @@ window.PORTFOLIO = {
       tags: ["CAD", "Electromechanical", "DC Motor"],
       thumb: "assets/img/motor-1.jpg",
       model: "assets/files/dc-motor.step",
-      summary: "A DC motor assembly designed and modeled for a school project. " +
-        "// EDIT this summary to describe the assignment and what the motor does.",
-      role: "// EDIT — describe exactly what you did on this project.",
+      summary: "A DC motor assembly I designed and modeled in CAD for a University of Cincinnati " +
+        "engineering course, covering the full electromechanical layout from rotor and stator to " +
+        "housing. // EDIT: name the course (e.g. Mechatronics) and what the motor was built to do.",
+      role: "I designed and modeled the complete DC motor assembly in CAD. " +
+        "// EDIT: add any analysis, hand calcs, or hardware you built beyond the model.",
       highlights: [
-        "// EDIT — add a headline achievement",
-        "// EDIT — add another"
+        "Full 3D CAD assembly of a DC motor — rotor, stator, windings, and housing",
+        "// EDIT — add a specific result (e.g. target torque/speed, or what you validated)"
       ],
       sections: [
-        { heading: "Overview", body: "// EDIT — describe the project goal and context." },
-        { heading: "Build", body: "// EDIT — describe how it was designed/built and what you learned." }
+        { heading: "Overview", body: "A coursework project at the University of Cincinnati to " +
+          "design and model a DC motor. // EDIT: describe the assignment, the class, and the goal." },
+        { heading: "Design", body: "I built the assembly in CAD, working through the motor's " +
+          "electromechanical layout. // EDIT: describe your design decisions and what you learned." }
       ],
       specs: [
         { label: "Type", value: "DC motor assembly" },
-        { label: "Tool", value: "// EDIT — e.g. SolidWorks / Fusion 360" }
+        { label: "Context", value: "UC coursework" },
+        { label: "Tool", value: "SolidWorks / NX" }
       ],
       gallery: [
         { src: "assets/img/motor-1.jpg", caption: "// EDIT caption" },
