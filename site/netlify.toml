@@ -1,0 +1,17 @@
+# Netlify configuration.
+# This site is plain static files — no build step. Netlify just serves the folder.
+
+[build]
+  publish = "."
+  command = ""
+
+# Long-cache the heavy 3D/PDF assets; they rarely change.
+[[headers]]
+  for = "/assets/files/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/assets/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"

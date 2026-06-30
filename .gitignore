@@ -1,0 +1,17 @@
+# OS / editor junk
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Claude Code local settings
+.claude/
+
+# Original CAD source folders — the files the website needs are already
+# copied into site/assets/. These originals are kept locally but not pushed,
+# so the repo stays small. Delete a line below if you DO want to track one.
+/BMS_Main/
+/BMS_Sense/
+/CAN_Hat/
+/HV_Sesnse/
+/Motor/
+/X-Inator/

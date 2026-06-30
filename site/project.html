@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project — Will Mattis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="wrap">
+      <a class="brand" href="index.html"><span class="dot"></span><span id="brand-name">Will Mattis</span></a>
+      <div class="nav-links">
+        <a href="index.html#work">Work</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="proj"><!-- rendered by project.js --></main>
+
+  <div class="lightbox" id="lightbox"><img src="" alt="" /></div>
+
+  <footer class="footer">
+    <div class="wrap">
+      <span id="foot-name">Will Mattis</span>
+      <a href="index.html">&#8592; Back to all projects</a>
+    </div>
+  </footer>
+
+  <!-- Lets step-viewer.js (and OrbitControls) resolve `import ... from "three"` -->
+  <script type="importmap">
+  { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" } }
+  </script>
+
+  <script src="js/data.js"></script>
+  <script src="js/project.js"></script>
+</body>
+</html>
