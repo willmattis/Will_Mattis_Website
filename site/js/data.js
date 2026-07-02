@@ -348,7 +348,7 @@ window.PORTFOLIO = {
       date: "2023–2025",
       status: "Startup",
       tags: ["CAD", "Mechanical", "Sealing", "Battery Materials", "Startup"],
-      thumb: "assets/img/xinator-0.jpg",
+      thumb: "assets/img/xinator-antechamber-1.jpg",
       model: "assets/files/x-inator-antechamber.step",
       summary: "X-Inator is the battery-materials startup I co-founded to develop nanostructured " +
         "electrode materials. This antechamber was designed to add a sealed airlock to an existing " +
@@ -385,18 +385,123 @@ window.PORTFOLIO = {
         { label: "Tool", value: "SolidWorks / NX" }
       ],
       gallery: [
-        { src: "assets/img/xinator-0.jpg", caption: "// EDIT caption" },
-        { src: "assets/img/xinator-1.jpg", caption: "" },
-        { src: "assets/img/xinator-2.jpg", caption: "" },
-        { src: "assets/img/xinator-3.jpg", caption: "" },
-        { src: "assets/img/xinator-4.jpg", caption: "" },
-        { src: "assets/img/xinator-5.jpg", caption: "" },
-        { src: "assets/img/xinator-6.jpg", caption: "" },
-        { src: "assets/img/xinator-7.jpg", caption: "" }
+        { src: "assets/img/xinator-antechamber-1.jpg", caption: "Antechamber assembly" },
+        { src: "assets/img/xinator-antechamber-2.jpg", caption: "" },
+        { src: "assets/img/xinator-antechamber-3.jpg", caption: "" },
+        { src: "assets/img/xinator-antechamber-4.jpg", caption: "" },
+        { src: "assets/img/xinator-antechamber-5.jpg", caption: "" }
       ],
       files: [
         { label: "3D model (STEP)", href: "assets/files/x-inator-antechamber.step", kind: "step" }
       ],
+      links: []
+    },
+
+    {
+      slug: "x-inator-aerogel",
+      title: "X-Inator — Aerogel Manufacturing",
+      subtitle: "Producing & characterizing the nanostructured electrode material",
+      org: "X-Inator (Personal Start-Up)",
+      group: "X-Inator",
+      date: "2023–2025",
+      status: "Startup",
+      tags: ["Materials", "Nanostructures", "Aerogel", "SEM", "Startup"],
+      thumb: "assets/img/xinator-aerogel-sem-1.jpg",
+      summary: "The aerogel was the material X-Inator was built around — a nanostructured electrode " +
+        "material we produced and characterized in-house. " +
+        "// EDIT: add a sentence on what the aerogel is and how it was made.",
+      role: "As co-founder, I developed and ran the production process for the material and " +
+        "characterized the results under a scanning electron microscope (SEM). " +
+        "// EDIT: describe exactly your part in the chemistry / process.",
+      highlights: [
+        "Produced a nanostructured aerogel material for use as a battery electrode",
+        "Characterized the material's nanostructure on a scanning electron microscope (SEM)",
+        "// EDIT — add a specific process detail or result (e.g. precursor, drying method, structure seen)"
+      ],
+      sections: [
+        { heading: "Overview", body: "X-Inator's core product was a nanostructured material for " +
+          "battery electrodes, made as an aerogel. Producing it in-house meant developing a repeatable " +
+          "process and then verifying the resulting nanostructure. " +
+          "// EDIT: describe the goal and the process at a high level." },
+        { heading: "Characterization", body: "We imaged the material on a scanning electron microscope " +
+          "to confirm its nanostructure. " +
+          "// EDIT: describe what the SEM images showed and how it informed the process." }
+      ],
+      specs: [
+        { label: "Material", value: "Nanostructured aerogel (battery electrode)" },
+        { label: "Characterization", value: "Scanning electron microscope (SEM)" },
+        { label: "Venture", value: "Co-founder, X-Inator" },
+        { label: "Tool", value: "// EDIT — process equipment / software" }
+      ],
+      gallery: [
+        { src: "assets/img/xinator-aerogel-sem-1.jpg", caption: "SEM imaging of the nanostructured material" },
+        { src: "assets/img/xinator-aerogel-sem-2.jpg", caption: "SEM imaging" },
+        { src: "assets/img/xinator-aerogel-sem-3.jpg", caption: "SEM imaging" },
+        { src: "assets/img/xinator-aerogel-1.jpg", caption: "" },
+        { src: "assets/img/xinator-aerogel-2.jpg", caption: "" },
+        { src: "assets/img/xinator-aerogel-3.jpg", caption: "" },
+        { src: "assets/img/xinator-aerogel-4.jpg", caption: "" },
+        { src: "assets/img/xinator-aerogel-5.jpg", caption: "" },
+        { src: "assets/img/xinator-aerogel-6.jpg", caption: "" },
+        { src: "assets/img/xinator-aerogel-7.jpg", caption: "" },
+        { src: "assets/img/xinator-aerogel-8.jpg", caption: "" },
+        { src: "assets/img/xinator-aerogel-9.jpg", caption: "" },
+        { src: "assets/img/xinator-aerogel-10.jpg", caption: "" },
+        { src: "assets/img/xinator-aerogel-11.jpg", caption: "" },
+        { src: "assets/img/xinator-aerogel-12.jpg", caption: "" },
+        { src: "assets/img/xinator-aerogel-13.jpg", caption: "" },
+        { src: "assets/img/xinator-aerogel-14.jpg", caption: "" }
+      ],
+      files: [],
+      links: []
+    },
+
+    {
+      slug: "x-inator-coin-cell",
+      title: "X-Inator — Coin Cell Manufacturing",
+      subtitle: "Assembling lab-made coin cells to test the electrode material",
+      org: "X-Inator (Personal Start-Up)",
+      group: "X-Inator",
+      date: "2023–2025",
+      status: "Startup",
+      tags: ["Batteries", "Coin Cell", "Lithium", "Testing", "Startup"],
+      thumb: "assets/img/xinator-coincell-1.jpg",
+      summary: "To find out whether the aerogel material actually worked as an electrode, we built " +
+        "lab-made coin-cell batteries with it and tested them — assembled inside an inert atmosphere " +
+        "to keep the lithium from reacting.",
+      role: "As co-founder, I assembled and tested the coin cells using our in-house material. " +
+        "// EDIT: describe the cell build, what you measured, and the results.",
+      highlights: [
+        "Produced lab-made coin-cell batteries using our own nanostructured electrode material",
+        "Assembled in an inert atmosphere to safely handle lithium",
+        "// EDIT — add what you tested (capacity, cycling, etc.) and any result"
+      ],
+      sections: [
+        { heading: "Overview", body: "Coin cells were how we validated the material end to end — " +
+          "building a real battery with our electrode and measuring how it performed. " +
+          "// EDIT: describe the cell construction and test goals." },
+        { heading: "Process", body: "Because the cells use lithium, assembly happened inside an inert " +
+          "environment. " +
+          "// EDIT: describe your assembly steps and what the results told you." }
+      ],
+      specs: [
+        { label: "Output", value: "Lab-made coin-cell batteries" },
+        { label: "Environment", value: "Inert atmosphere (lithium handling)" },
+        { label: "Venture", value: "Co-founder, X-Inator" },
+        { label: "Tool", value: "// EDIT — test equipment" }
+      ],
+      gallery: [
+        { src: "assets/img/xinator-coincell-1.jpg", caption: "" },
+        { src: "assets/img/xinator-coincell-2.jpg", caption: "" },
+        { src: "assets/img/xinator-coincell-3.jpg", caption: "" },
+        { src: "assets/img/xinator-coincell-4.jpg", caption: "" },
+        { src: "assets/img/xinator-coincell-5.jpg", caption: "" },
+        { src: "assets/img/xinator-coincell-6.jpg", caption: "" },
+        { src: "assets/img/xinator-coincell-7.jpg", caption: "" },
+        { src: "assets/img/xinator-coincell-8.jpg", caption: "" },
+        { src: "assets/img/xinator-coincell-9.jpg", caption: "" }
+      ],
+      files: [],
       links: []
     },
 
@@ -444,6 +549,71 @@ window.PORTFOLIO = {
       ],
       files: [
         { label: "3D model (STEP)", href: "assets/files/dc-motor.step", kind: "step" }
+      ],
+      links: []
+    },
+
+    {
+      slug: "phototransistor-optocouplers",
+      title: "Phototransistors & Optocouplers",
+      subtitle: "Optoelectronics study with interactive photoconductivity simulations",
+      org: "University of Cincinnati — Fundamentals of Optoelectronics",
+      group: "School Projects",
+      date: "Spring 2026",
+      status: "Presentation",
+      tags: ["Optoelectronics", "Phototransistors", "Optocouplers", "Python", "Simulation"],
+      thumb: "assets/img/photo-optocoupler-1.png",
+      summary: "A deep dive into phototransistors and optocouplers for my Fundamentals of " +
+        "Optoelectronics course: I derived the governing photoconductivity equations and built two " +
+        "interactive Python simulations. It connects directly to my Bearcats work — an optocoupler " +
+        "photo-relay is what isolates the 600V and 12V sides on the HV sense board.",
+      role: "I researched the topic, worked through the full derivation of the optocoupler/" +
+        "phototransistor equations from the Petritz photoconductivity model, and wrote two interactive " +
+        "Python simulations to make the behavior tangible. I presented the work to the class.",
+      highlights: [
+        "Derived the optocoupler current-transfer ratio (CTR) from the Petritz photoconductivity model — " +
+          "CTR ∝ β·Γₒₜ·η·(1+B)·τ/τₜ",
+        "Built an interactive optocoupler simulation with live sliders for LED forward current (I_F), " +
+          "collector–emitter voltage (V_CE), and temperature",
+        "Built a waveguide simulation showing how lateral illumination improves injection efficiency vs free space",
+        "Compared Si, GaAs, and InP for optical-fiber operation (wavelength, band gap, attenuation)",
+        "Tied it back to a real application: the optocoupler isolating 600V/12V on the EV4 HV sense board"
+      ],
+      sections: [
+        { heading: "Overview", body: "Optocouplers use an LED and a phototransistor to pass a signal " +
+          "across a galvanic isolation barrier — exactly what's needed to safely sense a high-voltage " +
+          "system from low-voltage electronics. For this Fundamentals of Optoelectronics project I " +
+          "studied how that pairing works, from the device physics up to a working circuit model." },
+        { heading: "Deriving the equations", body: "Starting from the Petritz “theory of " +
+          "photoconductivity in semiconductor films,” I worked through the change in carrier density, " +
+          "steady-state conductivity, specific responsivity, and apparent quantum efficiency to arrive at " +
+          "the current-transfer ratio — the optocoupler's equivalent of transistor β — and how it " +
+          "depends on the LED current, photocarrier lifetime, and temperature." },
+        { heading: "Optocoupler simulation", body: "I wrote a real-time Python simulation of the " +
+          "optocoupler's photoconductivity. Sliders for LED forward current, collector–emitter voltage, " +
+          "and temperature update plots of CTR vs current, relative CTR vs temperature, the base " +
+          "junction's photodiode I–V, and the phototransistor's I_C vs V_CE, with a live operating-point readout." },
+        { heading: "Waveguide simulation", body: "A second simulation compares feeding light into the " +
+          "phototransistor through a waveguide (lateral illumination) against free-space injection, showing " +
+          "how the waveguide improves coupling efficiency into the absorption region." }
+      ],
+      specs: [
+        { label: "Course", value: "Fundamentals of Optoelectronics (UC)" },
+        { label: "Topic", value: "Phototransistors & optocouplers" },
+        { label: "Model", value: "Petritz photoconductivity" },
+        { label: "Simulations", value: "Python (Matplotlib)" },
+        { label: "Term", value: "Spring 2026" }
+      ],
+      gallery: [
+        { src: "assets/img/photo-optocoupler-1.png", caption: "Interactive optocoupler photoconductivity simulation (Petritz model / ANO007)" },
+        { src: "assets/img/photo-optocoupler-2.png", caption: "Optocoupler simulation at a different operating point" },
+        { src: "assets/img/photo-waveguide-1.png", caption: "Waveguide vs free-space injection efficiency" },
+        { src: "assets/img/photo-waveguide-2.png", caption: "Waveguide simulation" }
+      ],
+      files: [
+        { label: "Presentation (PDF)", href: "assets/files/phototransistor-presentation.pdf", kind: "pdf" },
+        { label: "Optocoupler simulation (Python)", href: "assets/files/optocoupler_sim.py", kind: "file" },
+        { label: "Waveguide simulation (Python)", href: "assets/files/waveguide_sim.py", kind: "file" }
       ],
       links: []
     }
