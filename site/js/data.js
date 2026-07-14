@@ -54,6 +54,7 @@ window.PORTFOLIO = {
    *  up — it just lands in a catch-all section at the bottom.
    * ----------------------------------------------------------------------- */
   groups: [
+    { name: "Current Projects",         blurb: "What I'm actively building right now." },
     { name: "Bearcats Electric Racing", blurb: "Battery-management and high-voltage electronics for a Formula-style electric race car." },
     { name: "X-Inator",                 blurb: "My battery-materials startup — co-founded and raised $50k+ to build hardware for producing nanostructured electrode materials." },
     { name: "School Projects",          blurb: "Coursework and academic engineering projects at the University of Cincinnati." }
@@ -79,6 +80,71 @@ window.PORTFOLIO = {
    *    links       array of { label, href } external links (optional)
    * ----------------------------------------------------------------------- */
   projects: [
+
+    /* ===================== CURRENT PROJECTS =============================== */
+    {
+      slug: "pcb-laser-cnc",
+      title: "PCB Laser Fabrication",
+      subtitle: "Etching my own PCBs on a fiber laser — with a fire-risk simulator to keep it safe",
+      org: "Personal Project",
+      group: "Current Projects",
+      date: "2026 · ongoing",
+      status: "In progress",
+      tags: ["Python", "Fiber Laser", "PCB Fab", "Thermal Sim", "Gerber", "xTool F2 Ultra"],
+      thumb: "assets/img/pcb-cnc-heatmaps.png",
+      summary: "I'm building a toolchain to fabricate my own PCBs by laser-etching copper-clad board " +
+        "on an xTool F2 Ultra fiber laser. It has two parts: a converter that turns a Gerber file into " +
+        "laser-ready artwork, and a physics-based simulator that predicts whether a job will scorch or " +
+        "catch fire — so I can dial in safe settings before ever firing the laser.",
+      role: "I'm designing and writing the whole pipeline solo — the Gerber-to-laser converter, the " +
+        "thermal fire-risk model, its calibration to real burned boards, and the desktop GUI.",
+      highlights: [
+        "Fabricating PCBs by laser-etching copper-clad FR1/FR4 on an xTool F2 Ultra (60 W MOPA IR, 1064 nm)",
+        "Wrote a Gerber→xTool converter that turns a copper Gerber into laser-ready isolation/engrave SVGs (gerbonara + shapely)",
+        "Built a physics-based fire-risk simulator: a per-pass heat-accumulation model that outputs a peak-temperature map and a SAFE / SCORCH / FIRE verdict",
+        "Advisor that searches for the fastest laser settings that still stay SAFE, plus a copper-clearance check",
+        "Calibrated the thermal model to a real charred test board (one free constant fit to a measured point)",
+        "Tkinter desktop app: pick the SVG + board material, set laser parameters, get the heat map and verdict"
+      ],
+      sections: [
+        { heading: "Overview", body: "Ordering PCBs from a fab house means waiting days or weeks; " +
+          "chemical etching is messy. A fiber laser can ablate the copper directly, so I set out to make " +
+          "boards in-house on an xTool F2 Ultra. The hard part isn't the cutting — it's doing it without " +
+          "scorching the substrate or starting a fire, which is what the rest of this project solves." },
+        { heading: "Gerber → laser toolchain", body: "gerber_to_xtool.py reads a copper Gerber and " +
+          "produces the artwork the laser needs: the ENGRAVE-regions SVG (the negative copper area to " +
+          "burn away), a two-color keep/engrave view, positive copper artwork, a DXF, and a preview " +
+          "render. It uses gerbonara and shapely, and removes interior holes with 0.03 mm keyhole slits " +
+          "below the laser kerf, because xTool's software doesn't reliably render compound-path holes." },
+        { heading: "Fire-risk simulator", body: "The simulator rasterizes that ENGRAVE SVG into copper " +
+          "vs bare-substrate cells, then runs a per-pass heat-accumulation thermal model to build a " +
+          "peak-temperature map and classify the job as SAFE, SCORCH, or FIRE. It's tuned for FR1 and " +
+          "FR4 and the F2 Ultra's fluence/dose characteristics, and calibrated against a real board that " +
+          "charred at a known setting." },
+        { heading: "Results", body: "On a trace-width test board the model cleanly separates the " +
+          "regimes: 2 passes reads SCORCH (peak ~210 °C), 4 passes reads FIRE (peak ~509 °C), and the " +
+          "advisor's suggested 9-pass setting comes back SAFE (peak ~44 °C) — matching what actually " +
+          "burns on the bench." }
+      ],
+      specs: [
+        { label: "Machine", value: "xTool F2 Ultra (60 W MOPA IR, 1064 nm)" },
+        { label: "Substrates", value: "FR1 / FR4 copper-clad" },
+        { label: "Toolchain", value: "Python — gerbonara, shapely, numpy, scipy" },
+        { label: "Model", value: "Per-pass heat accumulation → SAFE / SCORCH / FIRE" },
+        { label: "Interface", value: "Tkinter desktop GUI" },
+        { label: "Status", value: "In progress" }
+      ],
+      gallery: [
+        { src: "assets/img/pcb-cnc-heatmaps.png", caption: "Fire-risk simulator output — SCORCH / FIRE / SAFE verdicts with peak temperatures across pass counts" },
+        { src: "assets/img/pcb-cnc-mask.png", caption: "Engrave SVG rasterized into copper vs bare-substrate cells" },
+        { src: "assets/img/pcb-cnc-speed-sweep.png", caption: "Parameter sweep used to find the fastest settings that stay safe" }
+      ],
+      files: [
+        { label: "Gerber → xTool converter (Python)", href: "assets/files/gerber_to_xtool.py", kind: "file" },
+        { label: "Laser-processing writeup (PDF)", href: "assets/files/pcb-laser-writeup.pdf", kind: "pdf" }
+      ],
+      links: []
+    },
 
     {
       slug: "bms-sense-board",
