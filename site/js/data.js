@@ -91,7 +91,7 @@ window.PORTFOLIO = {
       date: "2026 · ongoing",
       status: "In progress",
       tags: ["Python", "Fiber Laser", "PCB Fab", "Thermal Sim", "Gerber", "xTool F2 Ultra"],
-      thumb: "assets/img/pcb-cnc-heatmaps.png",
+      thumb: "assets/img/pcb-cnc-photo-trace-bench.jpg",
       summary: "I'm building a toolchain to fabricate my own PCBs by laser-etching copper-clad board " +
         "on an xTool F2 Ultra fiber laser. It has two parts: a converter that turns a Gerber file into " +
         "laser-ready artwork, and a physics-based simulator that predicts whether a job will scorch or " +
@@ -135,9 +135,18 @@ window.PORTFOLIO = {
         { label: "Status", value: "In progress" }
       ],
       gallery: [
-        { src: "assets/img/pcb-cnc-heatmaps.png", caption: "Fire-risk simulator output — SCORCH / FIRE / SAFE verdicts with peak temperatures across pass counts" },
-        { src: "assets/img/pcb-cnc-mask.png", caption: "Engrave SVG rasterized into copper vs bare-substrate cells" },
-        { src: "assets/img/pcb-cnc-speed-sweep.png", caption: "Parameter sweep used to find the fastest settings that stay safe" }
+        { src: "assets/img/pcb-cnc-photo-trace-bench.jpg", caption: "Laser-etched copper trace-width test panel, fresh off the xTool F2 Ultra" },
+        { src: "assets/img/pcb-cnc-photo-dash-complete.jpg", caption: "A finished laser-etched dashboard PCB" },
+        { src: "assets/img/pcb-cnc-photo-dash-test.jpg", caption: "Dashboard board etched alongside trace-width test coupons" },
+        { src: "assets/img/pcb-cnc-app-fire-risk.png", caption: "My fire-risk app flagging a FIRE-RISK job (peak 297 °C) before it's ever run" },
+        { src: "assets/img/pcb-cnc-app-scorch-risk.png", caption: "The app predicting a SCORCH result on FR1" },
+        { src: "assets/img/pcb-cnc-heatmaps.png", caption: "Model output across pass counts — SCORCH → FIRE → SAFE, with peak temperatures" },
+        { src: "assets/img/pcb-cnc-xtool-setup.png", caption: "The converter's SVG loaded in xTool Creative Space, set up to engrave FR1" },
+        { src: "assets/img/pcb-cnc-xtool-complete.png", caption: "Completed laser run in xTool software" },
+        { src: "assets/img/pcb-cnc-app-not-cut-through.png", caption: "A run the model flagged as not fully cut through" },
+        { src: "assets/img/pcb-cnc-app-touchup.png", caption: "Touch-up pass to clear leftover copper" },
+        { src: "assets/img/pcb-cnc-app-original-settings.png", caption: "Baseline laser settings in the app" },
+        { src: "assets/img/pcb-cnc-app-log.png", caption: "Logging a run's result to refine the model's calibration" }
       ],
       files: [
         { label: "Gerber → xTool converter (Python)", href: "assets/files/gerber_to_xtool.py", kind: "file" },
